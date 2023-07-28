@@ -1,0 +1,7 @@
+POST http://localhost:8000/api/add/car
+Content-Type: application/json
+
+{
+  "brand": "Лада 2110",
+  "license_plate": "В444ВВ78"
+}

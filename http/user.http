@@ -1,0 +1,8 @@
+POST http://localhost:8000/api/add/user
+Content-Type: application/json
+
+{
+  "name": "Максим",
+  "surname": "Фёдоров",
+  "position": "Водитель"
+}
