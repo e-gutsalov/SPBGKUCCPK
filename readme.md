@@ -62,6 +62,8 @@ php bin/console doctrine:migrations:migrate
 
 ## Все запросы к апи находятся в директории проекта http.
 
+## В директории dumpDB находится дамп базы данных
+
 ### Добавление пользователя 
 
 POST http://localhost:8000/api/add/user
