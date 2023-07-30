@@ -30,6 +30,7 @@ class BookingService
     {
         $car = $this->carRepository->find($data['carId']);
         $user = $this->userRepository->find($data['userId']);
+        $userStr = null;
 
         if (!$car instanceof Car) {
             throw new Exception('Запрашиваемая машина не найдена!');
