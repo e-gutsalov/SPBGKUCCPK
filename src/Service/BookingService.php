@@ -39,12 +39,13 @@ class BookingService
             throw new Exception('Пользователь не найден!');
         }
 
-        $userStr = ($user->getPosition() ?? '') . ' ' . ($user->getName() ?? '') . ' ' . ($user->getSurname() ?? '');
         if ($user->getCar() instanceof Car) {
+            $userStr = ($user->getPosition() ?? '') . ' ' . ($user->getName() ?? '') . ' ' . ($user->getSurname() ?? '');
             throw new Exception("У пользователя $userStr, уже есть бронь на машину");
         }
 
         if ($car->getUser() instanceof User) {
+            $userStr = ($car->getUser()->getPosition() ?? '') . ' ' . ($car->getUser()->getName() ?? '') . ' ' . ($car->getUser()->getSurname() ?? '');
             throw new Exception("Машина забронирована пользователем $userStr");
         }
 
